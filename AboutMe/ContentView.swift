@@ -31,11 +31,41 @@ struct ContentView: View {
                 Divider()
                 Text("Some fun facts about me :)")
                 List {
-                    Text("My favorite artist is Noah Kahan, closely followed by Taylor Swift")
-                    Text("I have 2 sisters, and we each have different hair colirs")
-                    Text("I love animals, especially my dog, Sammy")
+                    HStack{
+                        Text("My favorite artist is Noah Kahan, closely followed by Taylor Swift")
+                        Image("nk")
+                            .resizable(resizingMode: .stretch)
+                            .aspectRatio(contentMode: .fit)
+                    }
+                    HStack{
+                        Image("famjam")
+                            .resizable(resizingMode: .stretch)
+                            .aspectRatio(contentMode: .fit)
+                            .frame(height: nil)
+                        Text("I have 2 sisters, and we each have different hair colirs")
+                    }
+                    HStack{
+                        Text("I love animals, especially my dog, Sammy")
+                        Image("sammy")
+                            .resizable(resizingMode: .stretch)
+                            .aspectRatio(contentMode: .fit)
+                    }
+                }.multilineTextAlignment(.center)
+                .frame(width: /*@START_MENU_TOKEN@*/350.0/*@END_MENU_TOKEN@*/, height: 500)
+                Divider()
+                Text("Check out these bonus pics related to my fun facts!")
+                HStack{
+                    
+                    Image("stick season")
+                        .resizable(resizingMode: .stretch)
+                        .aspectRatio(contentMode: .fit)
+                    Image("goat")
+                        .resizable(resizingMode: .stretch)
+                        .aspectRatio(contentMode: .fit)
+                    Image("cow")
+                        .resizable(resizingMode: .stretch)
+                        .aspectRatio(contentMode: .fit)
                 }
-                .frame(width: /*@START_MENU_TOKEN@*/350.0/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100.0/*@END_MENU_TOKEN@*/)
 
             }
             .padding(10.0)
